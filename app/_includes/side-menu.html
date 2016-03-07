@@ -1,0 +1,24 @@
+{% assign pages = site.pages %}
+
+<aside class="column column--1-of-5">
+  <nav class="menu">
+    <span class="menu__title">Documentation</span>
+    {% for a in pages %}
+      {% if a.categories == 'guides' %}
+        <a class="menu__item {% if a.url == page.url %}menu__item--is-active{% endif %}" href="{{ site.baseurl }}{{ a.url }}">{{ a.title }}</a>
+      {% endif %}
+    {% endfor %}
+    <span class="menu__title">Global</span>
+    {% for a in pages %}
+      {% if a.categories == 'global' %}
+        <a class="menu__item {% if a.url == page.url %}menu__item--is-active{% endif %}" href="{{ site.baseurl }}{{ a.url }}">{{ a.title }}</a>
+      {% endif %}
+    {% endfor %}
+    <span class="menu__title">Modules</span>
+    {% for a in pages %}
+      {% if a.categories == 'modules' %}
+        <a class="menu__item {% if a.url == page.url %}menu__item--is-active{% endif %}" href="{{ site.baseurl }}{{ a.url }}">{{ a.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</aside>

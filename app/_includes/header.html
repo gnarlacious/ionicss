@@ -1,0 +1,12 @@
+<header class="masthead">
+  {% if page.title != 'Home' %}
+  <a class="masthead__brand" href="{{ site.baseurl }}/">
+    <img class="masthead__logo" src="{{ site.baseurl }}/img/lgo-ionicss.svg" alt="">
+    <span class="masthead__title">{{ site.name | capitalize }}</span>
+  </a>
+  {% endif %}
+  <nav class="masthead__nav">
+    <a class="masthead__link" href="/">Home</a>
+    <a class="masthead__link" href="/docs/">Docs</a>
+  </nav>
+</header>

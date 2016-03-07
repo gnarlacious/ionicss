@@ -1,0 +1,185 @@
+---
+layout: page
+permalink: "/buttons/"
+title: Buttons
+categories: modules
+---
+<h1>{{ page.title }}</h1>
+<p>
+  Buttons are used for actions, like in forms.
+</p>
+<b>Usage</b>
+<p>
+{% highlight scss %}
+@include buttons();
+{% endhighlight %}
+</p>
+<b>Options</b>
+<p>
+{% highlight scss %}
+@include buttons((
+  name: 'button',
+  padding: 10px 20px,
+  radius: 3px,
+  font-family: $font-family-action,
+  font-weight: 400,
+  // icon: 'lms-',
+  icon-size: 1.6rem,
+  type: 'default' 'primary' 'secondary' 'tertiary'
+));
+{% endhighlight %}
+</p>
+<h2 id="variations">Variations</h2>
+<p>
+  All buttons will start with a class <code>.button</code>. Followed by an additional <code>.button--{variation}</code> modifier.
+</p>
+<h3 id="default-buttons">Default Buttons</h3>
+<p>Page change, common/repeatable actions.</p>
+<p>
+  <button type="button" class="button button--default">Defaut Button</button>
+  <a href="javascript:;" class="button button--default">Link Button</a>
+</p>
+<p>
+{% highlight html %}
+<button class="button button--default">Default Buttons</button>
+<a href="#" class="button button--default">Link Button</a>
+{% endhighlight %}
+</p>
+
+<h3 id="primary-buttons">Primary</h3>
+<p>Primary page action, create, save, submit actions.</p>
+<p>
+  <button type="button" class="button button--primary">Primary Button</button>
+</p>
+<p>
+{% highlight html %}
+<button type="button" class="button button--primary">Primary Button</button>
+{% endhighlight %}
+</p>
+
+<h3 id="secondary-buttons">Secondary</h3>
+<p>Similar or opposing option as to primary action. Preview, edit, remove, etc.</p>
+<p>
+  <button type="button" class="button button--secondary">Secondary Button</button>
+</p>
+<p>
+{% highlight html %}
+<button type="button" class="button button--secondary">Secondary Button</button>
+{% endhighlight %}
+</p>
+
+<h3 id="tertiary-buttons">Tertiary</h3>
+<p>Navigation, toggles, switches, pagination.</p>
+<p>
+<button type="button" class="button button--tertiary">Tertiary Button</button>
+</p>
+<p>
+{% highlight html %}
+<button type="button" class="button button--tertiary">Tertiary Button</button>
+{% endhighlight %}
+</p>
+
+<h3 id="disabled-state">Disabled State</h3>
+<p>
+  <button type="button" class="button button--default" disabled>Defaut Button</button>
+  <a href="javascript:;" class="button button--default button--is-disabled">Link Button</a>
+</p>
+<p>
+{% highlight html %}
+<button type="button" class="button button--default" disabled>Defaut Button</button>
+<a href="javascript:;" class="button button--default button--is-disabled">Link Button</a>
+{% endhighlight %}
+</p>
+
+<h3 id="button-block">Button Block</h3>
+<p>
+  <button type="button" class="button button--default button--full">Button full width</button>
+</p>
+<p>
+{% highlight html %}
+<button type="button" class="button button--default button--full">Button full width</button>
+{% endhighlight %}
+</p>
+
+<!-- <h3 id="button-icon">Button with Icons</h3>
+<section class="box">
+  <div class="box__body">
+    <button type="button" class="button button--default">
+      <i class="button__icon fa fa-check-circle"></i>
+    </button>
+    <button type="button" class="button button--default">
+      <i class="button__icon button__icon--has-text fa fa-check-circle"></i>
+      Submit
+    </button>
+  </div>
+  <div class="box__gutter">
+{% highlight html %}
+
+<button type="button" class="button button--default">
+  <i class="button__icon fa fa-check-circle"></i>
+</button>
+
+<button type="button" class="button button--default">
+  <i class="button__icon button__icon--has-text fa fa-check-circle"></i>
+  Submit
+</button>
+{% endhighlight %}
+  </div>
+</section> -->
+
+<h2 id="controllers">Button Controllers</h2>
+<p>
+  Although they are buttons, they are used separately from buttons which means a need to call an additional module to use them.
+</p>
+<b>Usage</b>
+<p>
+{% highlight scss %}
+@include control-group();
+{% endhighlight %}
+</p>
+<b>Options</b>
+<p>
+{% highlight scss %}
+@include control-group((
+  name: 'control-group'
+));
+{% endhighlight %}
+</p>
+<h3 id="button-groups">Button Groups</h3>
+<p>
+  The style of the button groups are dictated by how the buttons are created. The only option is to change the name of the <code>.control-group</code> if that is not the design names them.
+</p>
+<section class="control-group">
+  <button class="button button--tertiary">Prev</button>
+  <button class="button button--tertiary">Now</button>
+  <button class="button button--tertiary">Next</button>
+</section>
+<p>
+{% highlight html %}
+<section class="control-group">
+  <button class="button button--tertiary">Prev</button>
+  <button class="button button--tertiary">Now</button>
+  <button class="button button--tertiary">Next</button>
+</section>
+{% endhighlight %}
+</p>
+<!--
+//  REVISIT WHEN JS COMPONENTS ARE IMPLEMENTED
+//
+<h3 id="button-toggle">Button Toggle</h3>
+<section class="box">
+  <div class="box__body">
+    <div class="button__toggle">
+      <button type="button" class="button button--secondary">Button one</button>
+      <button type="button" class="button button--secondary button--is-inactive">Button two</button>
+    </div>
+  </div>
+  <div class="box__gutter">
+    {% highlight html %}
+    <div class="button__toggle">
+      <button type="button" class="button button--secondary">Button one</button>
+      <button type="button" class="button button--secondary button--is-inactive">Button two</button>
+    </div>
+    {% endhighlight %}
+  </div>
+</section> -->

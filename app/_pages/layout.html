@@ -1,0 +1,291 @@
+---
+layout: page
+permalink: "/layout/"
+title: Layout
+categories: global
+---
+
+<h1 id="{{ page.title }}">{{ page.title }}</h1>
+<h2 id="breakpoints">Media Queries Breakpoints</h2>
+<p>
+  A list of breakpoint variables for all mobile-friendly media queries.
+</p>
+{% highlight scss %}
+$bp-smallest:    24.615em; // 320px
+$bp-smaller:     36.923em; // 480px
+$bp-small:       46.154em; // 600px
+$bp-medium:      59.077em; // 768px
+$bp-large:       69.231em; // 900px
+$bp-larger:      84.615em; // 1100px
+$bp-largest:     100em;    // 1300px
+{% endhighlight %}
+<h2 id="container">Container</h2>
+<p>
+  The container is the frame that dictates the <code>max-width</code> the entire website.
+</p>
+<b>Usage</b>
+<p>
+{% highlight scss %}
+@include container();
+{% endhighlight %}
+</p>
+<b>Options</b>
+<p>
+  Change how the container is used.
+</p>
+{% highlight scss %}
+@include container((
+  name: 'wrapper',
+  max-width: $bp-largest
+));
+{% endhighlight %}
+<h2 id="grid">Grid</h2>
+<h3>Grid Variables</h3>
+<p>
+  The grid has several default styles and naming structure. But all areas of the grid are capable of changing.
+</p>
+<b>Namespacing</b>
+<p>
+  Rename the grid if the project needs to with namespaces. The default values given are <code>row</code> and <code>column</code>.
+</p>
+<p>
+{% highlight scss %}
+$grid-namespace: 'row';
+$grid-column-namespace: 'column';
+{% endhighlight %}
+</p>
+<b>Column Groups</b>
+<p>
+  The default columns for a 12 grid framework.
+</p>
+<p>
+{% highlight scss %}
+$col-groups: (2, 3, 4, 5, 6, 8, 12);
+{% endhighlight %}
+</p>
+<b>Gutter Width</b>
+<p>
+  Gutter width is used both horizontally and vertically bottom spacing.
+</p>
+<p>
+{% highlight scss %}
+$gutter-width: 20px;
+{% endhighlight %}
+</p>
+<b>Pushes and Pulls</b>
+<p>
+  A boolean for column ordering. By default is set to <code>true</code>. If column ordering is not necessary set these variables to <code>false</code> to save on file space.
+</p>
+<p>
+{% highlight scss %}
+$pushes: true;
+$pulls: true;
+{% endhighlight %}
+</p>
+<h3>Grid Layout</h3>
+<p>
+  The grid is built with fractions in mind. The column modifiers are capable of generating any fraction as needed. <code>1-of-2</code> can be viewed as 1/2 or 50%.
+</p>
+<div class="layout">
+  <section class="row">
+    <div class="column column--1-of-5">
+      <code>
+        .column--1-of-5
+      </code>
+    </div>
+    <div class="column column--1-of-5">
+      <code>
+        .column--1-of-5
+      </code>
+    </div>
+    <div class="column column--1-of-5">
+      <code>
+        .column--1-of-5
+      </code>
+    </div>
+    <div class="column column--1-of-5">
+      <code>
+        .column--1-of-5
+      </code>
+    </div>
+    <div class="column column--1-of-5">
+      <code>
+        .column--1-of-5
+      </code>
+    </div>
+  </section>
+  <section class="row">
+    <div class="column column--1-of-4">
+      <code>
+        .column--1-of-4
+      </code>
+    </div>
+    <div class="column column--1-of-4">
+      <code>
+        .column--1-of-4
+      </code>
+    </div>
+    <div class="column column--1-of-4">
+      <code>
+        .column--1-of-4
+      </code>
+    </div>
+    <div class="column column--1-of-4">
+      <code>
+        .column--1-of-4
+      </code>
+    </div>
+  </section>
+  <section class="row">
+    <div class="column column--1-of-3">
+      <code>
+        .column--1-of-3
+      </code>
+    </div>
+    <div class="column column--1-of-3">
+      <code>
+        .column--1-of-3
+      </code>
+    </div>
+    <div class="column column--1-of-3">
+      <code>
+        .column--1-of-3
+      </code>
+    </div>
+  </section>
+  <section class="row">
+    <div class="column column--1-of-3">
+      <code>
+        .column--1-of-3
+      </code>
+    </div>
+    <div class="column column--2-of-3">
+      <code>
+        .column--2-of-3
+      </code>
+    </div>
+  </section>
+  <section class="row">
+    <div class="column column--1-of-2">
+      <code>
+        .column--1-of-2
+      </code>
+    </div>
+    <div class="column column--1-of-2">
+      <code>
+        .column--1-of-2
+      </code>
+    </div>
+  </section>
+  <section class="row">
+    <div class="column column--2-of-2">
+      <code>
+        .column--2-of-2
+      </code>
+    </div>
+  </section>
+{% highlight html %}
+<section class="row">
+  <div class="column column--1-of-5">
+    <code>.column--1-of-5</code>
+  </div>
+  <div class="column column--1-of-5">
+    <code>.column--1-of-5</code>
+  </div>
+  <div class="column column--1-of-5">
+    <code>.column--1-of-5</code>
+  </div>
+  <div class="column column--1-of-5">
+    <code>.column--1-of-5</code>
+  </div>
+  <div class="column column--1-of-5">
+    <code>.column--1-of-5</code>
+  </div>
+</section>
+<section class="row">
+  <div class="column column--1-of-4">
+    <code>.column--1-of-4</code>
+  </div>
+  <div class="column column--1-of-4">
+    <code>.column--1-of-4</code>
+  </div>
+  <div class="column column--1-of-4">
+    <code>.column--1-of-4</code>
+  </div>
+  <div class="column column--1-of-4">
+    <code>.column--1-of-4</code>
+  </div>
+</section>
+<section class="row">
+  <div class="column column--1-of-3">
+    <code>.column--1-of-3</code>
+  </div>
+  <div class="column column--1-of-3">
+    <code>.column--1-of-3</code>
+  </div>
+  <div class="column column--1-of-3">
+    <code>.column--1-of-3</code>
+  </div>
+</section>
+<section class="row">
+  <div class="column column--1-of-3">
+    <code>.column--1-of-3</code>
+  </div>
+  <div class="column column--2-of-3">
+    <code>.column--2-of-3</code>
+  </div>
+</section>
+<section class="row">
+  <div class="column column--1-of-2">
+    <code>.column--1-of-2</code>
+  </div>
+  <div class="column column--1-of-2">
+    <code>.column--1-of-2</code>
+  </div>
+</section>
+{% endhighlight %}
+
+<h2>Column Ordering</h2>
+<p>
+  For mobile-friendly ordering add <code>--push</code> and <code>--pull</code> modifiers to the column class.
+</p>
+<section class="row">
+  <div class="column column--2-of-5 column--push-3-of-5">
+    <code>
+      .column--2-of-5.column--push-3-of-5
+    </code>
+  </div>
+  <div class="column column--3-of-5 column--pull-2-of-5">
+    <code>
+      .column--3-of-5.column--pull-2-of-5
+    </code>
+  </div>
+</section>
+{% highlight html %}
+<section class="row">
+  <div class="column column--2-of-5 column--push-3-of-5">
+    <code>.column--2-of-5.column--push-3-of-5</code>
+  </div>
+  <div class="column column--3-of-5 column--pull-2-of-5">
+    <code>.column--3-of-5.column--pull-2-of-5</code>
+  </div>
+</section>
+{% endhighlight %}
+
+<h2>Centered Columns</h2>
+<p>
+  Add the <code>--centered</code> modifier to the column class to center the column.
+</p>
+<section class="row">
+  <div class="column column--1-of-2 column--centered">
+    <code>
+      .column--centered
+    </code>
+  </div>
+</section>
+{% highlight html %}
+<div class="column column--1-of-2 column--centered">
+  <code>.column--centered</code>
+</div>
+{% endhighlight %}
+</div>

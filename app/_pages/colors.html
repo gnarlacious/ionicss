@@ -1,0 +1,95 @@
+---
+layout: page
+permalink: "/colors/"
+title: Colors
+categories: global
+---
+
+<h1 id="{{ page.title }}">{{ page.title }}</h1>
+
+<h2 id="brand">Brand Colors</h2>
+<p>
+  Brand colors are lightly spread through the framework. Only to keep small items consistent. They are primarily there to function as a key to use wherever inside or out of the framework.
+</p>
+<b>Variables</b>
+<p>
+  There are three actionable brand color variables that are dispersed through the framework slightly.
+</p>
+<section class="row">
+  <div class="column column--1-of-4">
+    <section class="card">
+      <div class="card__media" style="background-color: #5F81E4"></div>
+      <div class="card__body">
+        <span>$brand-color-primary</span><br>
+        <span>#5F81E4</span>
+      </div>
+    </section>
+  </div>
+  <div class="column column--1-of-4">
+    <section class="card">
+      <div class="card__media" style="background-color: #F67FF5"></div>
+      <div class="card__body">
+        <span>$brand-color-secondary</span><br>
+        <span>#F67FF5</span>
+      </div>
+    </section>
+  </div>
+  <div class="column column--1-of-4">
+    <section class="card">
+      <div class="card__media" style="background-color: #47E4E0"></div>
+      <div class="card__body">
+        <span>$brand-color-tertiary</span><br>
+        <span>#47E4E0</span>
+      </div>
+    </section>
+  </div>
+  <div class="column column--1-of-4">
+    <section class="card">
+      <div class="card__media" style="background-color: #E4E4E4"></div>
+      <div class="card__body">
+        <span>$brand-color-gray</span><br>
+        <span>#E4E4E4</span>
+      </div>
+    </section>
+  </div>
+</section>
+
+<p>
+{% highlight scss %}
+$brand-color-primary:   #5F81E4;
+$brand-color-secondary: #F67FF5;
+$brand-color-tertiary:  #47E4E0;
+$brad-color-gray:       #E4E4E4;
+{% endhighlight %}
+</p>
+
+<h2 id="font">Font Colors</h2>
+<b>Variables</b>
+<p>
+{% highlight scss %}
+$font-color-base:       #434343;
+$font-color-action:     $brand-color-primary;
+{% endhighlight %}
+</p>
+
+<h2 id="state">State Colors</h2>
+<b>Variables</b>
+<p>
+{% highlight scss %}
+$state-error-color:   red;
+$state-error-bkg:     lighten($state-error-color, 30%);
+$state-error-border:  $state-error-color;
+
+$state-success-color:   green;
+$state-success-bkg:     lighten($state-success-color, 30%);
+$state-success-border:  $state-success-color;
+
+$state-warning-color:   yellow;
+$state-warning-bkg:     lighten($state-warning-color, 30%);
+$state-warning-border:  $state-warning-color;
+
+$state-info-color:  blue;
+$state-info-bkg:    lighten($state-info-color, 30%);
+$state-info-border: $state-info-color;
+{% endhighlight %}
+</p>

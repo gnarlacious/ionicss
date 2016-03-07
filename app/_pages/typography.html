@@ -1,0 +1,125 @@
+---
+layout: page
+permalink: "/typography/"
+title: Typography
+categories: global
+---
+
+<h1 id="{{ page.title }}">{{ page.title }}</h1>
+<h2 id="variables">Variables</h2>
+<p>
+  Override default variables above the import of <code>{{site.name}}.scss</code> file.
+</p>
+<h3>Font Size</h3>
+<p>
+  Choose whether to use the default variables given or change them to reflect your design.
+</p>
+<p>
+{% highlight scss %}
+$font-size-base:   14px;
+$line-height-base: 1.4;
+
+// Element Specific
+$font-size-blockquote: 18px;
+{% endhighlight %}
+</p>
+<h3>Font Families</h3>
+<b>Base Styles</b>
+<p>
+  Change base font families to keep it simple.
+</p>
+<p>
+{% highlight scss %}
+$font-family-primary:   sans-serif;
+$font-family-secondary: serif;
+$font-family-code:      monospace;
+{% endhighlight %}
+</p>
+<b>Specific Styles</b>
+<p>
+  To get more specific with font families, change every section separately.
+</p>
+<p>
+{% highlight scss %}
+$font-family-base:        $font-family-primary;
+$font-family-action:      $font-family-primary;
+$font-family-heading:     $font-family-secondary;
+$font-family-lead:        $font-family-secondary;
+$font-family-blockquote:  $font-family-secondary;
+{% endhighlight %}
+</p>
+<h3>Font Weights</h3>
+<p>
+  Each section has a specific weight attached to it as a default. You may override those as well.
+</p>
+<p>
+{% highlight scss %}
+$font-weight-base:        400;
+$font-weight-action:      400;
+$font-weight-heading:     700;
+$font-weight-lead:        400;
+{% endhighlight %}
+</p>
+<h2 id="quotes">Quotes</h2>
+<p>
+  There are three different types of quotes. There is the original blockquote everyone knows and loves with the addition of pullquotes to either side of the document.
+</p>
+<b>Blockquote</b>
+<p>
+  The basic blockquote with minimal tweaks.
+</p>
+<p>
+{% highlight html %}
+<blockquote>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+</blockquote>
+{% endhighlight %}
+</p>
+<b>Pullquote Directional</b>
+<p>
+  Pullquotes are essentailly blockquotes with a modifier for directional purposes.
+</p>
+<p>
+{% highlight html %}
+<blockquote class="pullquote--right">
+Lorem ipsum dolor sit amet, consectetur adipisicing
+</blockquote>
+{% endhighlight %}
+</p>
+
+<h2 id="example">Example</h2>
+<p>
+  Changed three variables above ionicss stylesheet to override the overall typography.
+</p>
+<p>
+{% highlight scss %}
+$font-family-primary:   "Merriweather";
+$font-family-secondary: "Merriweather";
+$font-family-action: "Source Sans Pro";
+
+@import 'path/to/ionicss';
+{% endhighlight %}
+</p>
+<article>
+  <h1>Article Heading</h1>
+  <h2 class="lead">Lead copy dolor sit amet, consectetur adipisicing elit. Dolor, perferendis! Odit quisquam dicta illum ipsa quod natus iure aliquid necessitatibus veritatis, itaque magnam aliquam, dolorum nostrum nemo, explicabo perspiciatis nobis!</h2>
+  <p>{{ site.time | date: '%d %B %Y' }}</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)">Read More <span>&rsaquo;</span></a>
+  </p>
+  <blockquote>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+  </blockquote>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <blockquote class="pullquote--right">
+    Lorem ipsum dolor sit amet, consectetur adipisicing
+  </blockquote>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <hr>
+  <p>
+    Author Name
+  </p>
+</article>

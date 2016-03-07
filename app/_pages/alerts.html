@@ -1,0 +1,84 @@
+---
+layout: page
+permalink: "/alerts/"
+title: Alerts
+categories: modules
+---
+
+<h1 id="{{ page.title }}">{{ page.title }}</h1>
+<p>
+  Flash messages, or alerts, inform users of successful or pending actions.
+</p>
+<b>Usage</b>
+<p>
+{% highlight scss %}
+@include alerts();
+{% endhighlight %}
+</p>
+<b>Options</b>
+<p>
+  Change how alerts are viewed.
+</p>
+<p>
+{% highlight scss %}
+@include alerts((
+  name: 'alert',
+  padding: 0.5rem 1rem,
+  margin: $gutter-width 0,
+  border-width: 1px,
+  radius: 0,
+));
+{% endhighlight %}
+</p>
+<h2 id="variations">Variations</h2>
+<h3 id="info">Info</h3>
+<p>
+  Add <code>--has-info</code> modifier to the alert class to use the info state colors.
+</p>
+<section class="alert alert--has-info">
+  <p>Here is my title</h4>
+</section>
+{% highlight html %}
+<section class="alert alert--has-info">
+  <p>Here is my title</h4>
+</section>
+{% endhighlight %}
+
+<h3 id="warning">Warning</h3>
+<p>
+  Add <code>--has-warning</code> modifier to the alert class to use the warning state colors.
+</p>
+<section class="alert alert--has-warning">
+  <p>Here is my title</h4>
+</section>
+{% highlight html %}
+<section class="alert alert--has-warning">
+  <p>Here is my title</h4>
+</section>
+{% endhighlight %}
+
+<h3 id="error">Error</h3>
+<p>
+  Add <code>--has-error</code> modifier to the alert class to use the error state colors.
+</p>
+<section class="alert alert--has-error">
+  <p>Here is my title</h4>
+</section>
+{% highlight html %}
+<section class="alert alert--has-error">
+  <p>Here is my title</h4>
+</section>
+{% endhighlight %}
+
+<h3 id="success">Success</h3>
+<p>
+  Add <code>--has-success</code> modifier to the alert class to use the success state colors.
+</p>
+<section class="alert alert--has-success">
+  <p>Here is my title</h4>
+</section>
+{% highlight html %}
+<section class="alert alert--has-success">
+  <p>Here is my title</h4>
+</section>
+{% endhighlight %}

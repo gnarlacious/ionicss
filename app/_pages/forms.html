@@ -1,0 +1,240 @@
+---
+layout: page
+permalink: "/forms/"
+title: Forms
+categories: modules
+---
+<h1>{{ page.title }}</h1>
+<p>Creates basic styles all form elements.</p>
+<b>Usage</b>
+<p>
+{% highlight scss %}
+@include forms();
+{% endhighlight %}
+</p>
+<b>Options</b>
+<p>
+{% highlight scss %}
+@include forms((
+  name: 'form',
+  label: (
+    weight: 700,
+    size: $font-size-base,
+    color: $form-label-color
+  ),
+  input: (
+    border: $input-border,
+    background: $input-bkg,
+    color: $input-color
+  ),
+  help-text-color: #aaa
+));
+{% endhighlight %}
+</p>
+
+<h2 id="example">Example</h2>
+<p>
+  Form inputs have a width of 100% with the purpose of sizing within the grid system.
+</p>
+<form>
+  <label class="form__label" for="name">Name</label>
+  <input class="form__input" type="text" id="name" >
+
+  <label class="form__label" for="email">Email</label>
+  <input class="form__input" type="email" id="email" value="">
+
+  <label class="form__check">
+    <input type="checkbox" id="remember"/> Remember me
+  </label>
+
+  <label class="form__radio">
+    <input type="radio" name="radio" id="yes" checked/> Yes
+  </label>
+  <label class="form__radio">
+    <input type="radio" name="radio" id="no" /> No
+  </label>
+
+  <button class="button button--primary" type="submit" role="button">Submit</button>
+</form>
+<p>
+{% highlight html %}
+<form>
+  <label class="form__label" for="name">Name</label>
+  <input class="form__input" type="text" id="name" >
+
+  <label class="form__label" for="email">Email</label>
+  <input class="form__input" type="email" id="email" value="">
+
+  <label class="form__check">
+    <input type="checkbox" id="remember"/> Remember me
+  </label>
+
+  <label class="form__radio">
+    <input type="radio" name="radio" id="yes" checked/> Yes
+  </label>
+  <label class="form__radio">
+    <input type="radio" name="radio" id="no" /> No
+  </label>
+
+  <button class="button button--primary" type="submit" role="button">Submit</button>
+</form>
+{% endhighlight %}
+</p>
+
+<h2 id="form-validation">Form Validation</h2>
+<form>
+  <!-- Basic input -->
+  <label class="form__label">Basic Input</label>
+  <input class="form__input" type="text" />
+  <span class="form__help-text">This is help text for input.</span>
+
+  <!-- Disabled input -->
+  <label class="form__label">Disabled Input</label>
+  <input class="form__input" disabled type="text" value="Disabled value">
+
+  <!-- Success input -->
+  <label class="form__label">Success Input</label>
+  <input class="form__input form__input--has-success" type="text" value="Successful value">
+  <span class="form__help-text form__help-text--has-success">Correct information!</span>
+
+  <!-- Success input -->
+  <label class="form__label">Failed Input</label>
+  <input class="form__input form__input--has-error" type="text" value="Incorrect value">
+  <span class="form__help-text form__help-text--has-error">Wrong information!</span>
+</form>
+<p>
+{% highlight html %}
+<form>
+  <!-- Basic input -->
+  <label class="form__label">Basic Input</label>
+  <input class="form__input" type="text" />
+  <span class="form__help-text">This is help text for input.</span>
+
+  <!-- Disabled input -->
+  <label class="form__label">Disabled Input</label>
+  <input class="form__input" disabled type="text" value="Disabled value">
+
+  <!-- Success input -->
+  <label class="form__label">Success Input</label>
+  <input class="form__input form__input--has-success" type="text" value="Successful value">
+  <span class="form__help-text form__help-text--has-success">Correct information!</span>
+
+  <!-- Success input -->
+  <label class="form__label">Failed Input</label>
+  <input class="form__input form__input--has-error" type="text" value="Incorrect value">
+  <span class="form__help-text form__help-text--has-error">Wrong information!</span>
+</form>
+{% endhighlight %}
+</p>
+
+<h2 id="select-box">Select Box</h2>
+<form>
+  <select class="form__select">
+    <option>Choose one</option>
+    <option>This</option>
+    <option>That</option>
+    <option>Those</option>
+    <option>Other</option>
+  </select>
+</form>
+<p>
+{% highlight html %}
+<form>
+  <select class="form__select">
+    <option>Choose one</option>
+    <option>This</option>
+    <option>That</option>
+    <option>Those</option>
+    <option>Other</option>
+  </select>
+</form>
+{% endhighlight %}
+</p>
+
+<h2 id="radio">Radio Buttons</h2>
+<form>
+  <label class="form__radio">
+    <input type="radio" name="name" checked> Check me.
+  </label>
+  <label class="form__radio">
+    <input type="radio" name="name"> No, check me!
+  </label>
+</form>
+<p>
+{% highlight html %}
+<form>
+  <label class="form__radio">
+    <input type="radio" name="name" checked> Check me.
+  </label>
+  <label class="form__radio">
+    <input type="radio" name="name"> No, check me!
+  </label>
+</form>
+{% endhighlight %}
+</p>
+
+<h2 id="inline-radio">Inline Radio Buttons</h2>
+<form>
+  <label class="form__radio--inline">
+    <input type="radio" name="name" checked> Check me.
+  </label>
+  <label class="form__radio--inline">
+    <input type="radio" name="name"> No, check me!
+  </label>
+</form>
+<p>
+{% highlight html %}
+<form>
+  <label class="form__radio--inline">
+    <input type="radio" name="name" checked> Check me.
+  </label>
+  <label class="form__radio--inline">
+    <input type="radio" name="name"> No, check me!
+  </label>
+</form>
+{% endhighlight %}
+</p>
+
+<h2 id="checkboxes">Check Boxes</h2>
+<form>
+  <label class="form__check">
+    <input type="checkbox" name="name" checked> Check me.
+  </label>
+  <label class="form__check">
+    <input type="checkbox" name="name"> Check me too!
+  </label>
+</form>
+<p>
+{% highlight html %}
+<form>
+  <label class="form__check">
+    <input type="checkbox" name="name" checked> Check me.
+  </label>
+  <label class="form__check">
+    <input type="checkbox" name="name"> Check me too!
+  </label>
+</form>
+{% endhighlight %}
+</p>
+
+<h2 id="inline-checkboxes">Inline Checkboxes</h2>
+<form>
+  <label class="form__check--inline">
+    <input type="checkbox" name="name" checked> Check me.
+  </label>
+  <label class="form__check--inline">
+    <input type="checkbox" name="name"> Check me too!
+  </label>
+</form>
+<p>
+{% highlight html %}
+<form>
+  <label class="form__check--inline">
+    <input type="checkbox" name="name" checked> Check me.
+  </label>
+  <label class="form__check--inline">
+    <input type="checkbox" name="name"> Check me too!
+  </label>
+</form>
+{% endhighlight %}
+</p>

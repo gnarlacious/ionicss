@@ -1,0 +1,28 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: ionicss
+description: Basic front-end framework
+author:
+  name: Dustin Delatore
+  email: dustin@delatore.me
+  twitter: whos_dustin
+company: Gnarlacious
+
+# Grunt handles images and assets.
+exclude: ['img', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+include: ['.htaccess', '_pages']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+# Markdown library
+markdown: redcarpet
+#   extensions: ['fenced_code_blocks', 'smart']
+
+highlighter: pygments

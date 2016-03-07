@@ -1,0 +1,65 @@
+---
+layout: page
+permalink: "/docs/"
+title: Getting Started
+categories: guides
+---
+
+<h1 id="{{ page.title }}">{{ page.title }}</h1>
+<h3 id="installation">Installation</h3>
+<p>
+{% highlight bash %}
+$ bower install {{ site.name }}
+{% endhighlight %}
+</p>
+<p>
+  File path will primarily be located in <code>_bower-components/ionicss/scss/ionicss.scss</code>.
+</p>
+<h3 id="setup">Setup</h3>
+<p>
+  Import the <code>iconicss.scss</code> into your main sass style sheet.
+</p>
+<p>
+{% highlight scss %}
+// styles.scss
+@import "/path/to/ionicss";
+{% endhighlight %}
+</p>
+<h3 id="includes">Includes</h3>
+<p>
+  Global styles such as normalize, typography, and grid automatically compile. To keep the styles as lightweight as possible no modules or layout are compiled, by design. Every module can be individually included below the <code>ionicss.scss</code> or all of them can be included to use the full capacity of {{ site.name | capitalize }}.
+</p>
+<b>Individual Modules</b>
+<p>
+  Only use what you need. Something as simple as a login page with a form, submit button would like like this.
+</p>
+<p>
+{% highlight scss %}
+// styles.scss
+@import "/path/to/ionicss.scss";
+
+@include forms();
+@include buttons();
+{% endhighlight %}
+</p>
+<b>All Modules</b>
+<p>
+{% highlight scss %}
+@import "/path/to/ionicss.scss";
+
+@include all();
+{% endhighlight %}
+</p>
+<h3 id="variables">Variables</h3>
+<p>
+  Each element in Ionicss has a set  of variables that are capable of overriding. From global typography to layout to every module there will be a list of variables you are capable of overriding.
+</p>
+<p>
+{% highlight scss %}
+// styles.scss
+$font-family-primary: "Merriweather" serif;
+$input-bkg: #ccc;
+
+@import "/path/to/ionicss.scss";
+{% endhighlight %}
+</p>

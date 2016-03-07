@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="792px" height="594px" viewBox="0 0 792 594" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" fill="#000000">
+            <g id="ico-modal" sketch:type="MSLayerGroup">
+                <path d="M0,0 L0,594 L792,594 L792,0 L0,0 L0,0 Z M776.16,578.16 L15.84,578.16 L15.84,15.84 L776.16,15.84 L776.16,578.16 L776.16,578.16 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                <rect id="Rectangle-path" sketch:type="MSShapeGroup" x="534.6" y="396" width="99" height="39.6"></rect>
+                <rect id="Rectangle-path" sketch:type="MSShapeGroup" x="415.8" y="396" width="99" height="39.6"></rect>
+                <path d="M673.2,118.8 L118.8,118.8 L118.8,475.2 L673.2,475.2 L673.2,118.8 L673.2,118.8 Z M601.92,157.794 L607.254,152.46 L617.76,162.966 L628.266,152.46 L633.6,157.794 L623.094,168.3 L633.6,178.806 L628.266,184.14 L617.76,173.63 L607.254,184.136 L601.92,178.806 L612.426,168.3 L601.92,157.794 L601.92,157.794 Z M158.4,160.38 L356.4,160.38 L356.4,176.22 L158.4,176.22 L158.4,160.38 L158.4,160.38 Z M657.36,459.36 L134.64,459.36 L134.64,217.8 L657.36,217.8 L657.36,459.36 L657.36,459.36 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                <rect id="Rectangle-path" sketch:type="MSShapeGroup" x="198" y="316.8" width="396" height="15.84"></rect>
+                <rect id="Rectangle-path" sketch:type="MSShapeGroup" x="198" y="277.2" width="198" height="15.84"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

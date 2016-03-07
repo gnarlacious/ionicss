@@ -1,0 +1,41 @@
+.masthead {
+  height: 70px;
+  margin-bottom: 20px;
+}
+.masthead__brand {
+  display: block;
+  color: #434343;
+  &:hover,
+  &:visited {
+    color: #434343;
+  }
+}
+.masthead__logo {
+  width: 50px;
+  margin: 15px 0 0;
+  float: left;
+}
+.masthead__title {
+  margin: 18px 0 0 10px;
+  float: left;
+  font-size: $font-size-base * 2;
+}
+.masthead__nav {
+  float: right;
+}
+.masthead__link {
+  display: block;
+  padding: 0 20px;
+  margin-left: 10px;
+  float: left;
+  line-height: 70px;
+  font-size: 20px;
+  color: #434343;
+  text-decoration: none;
+  &:visited {
+    color: #434343;
+  }
+  &:hover {
+    color: #000;
+  }
+}

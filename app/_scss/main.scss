@@ -1,0 +1,57 @@
+// Import Your Variables Below
+// @import 'myvaraiables'
+$font-family-primary:   "Source Sans Pro";
+$font-family-secondary: "Source Sans Pro";
+$font-size-base: 18px;
+
+//Import Ionicss
+@import "../../scss/ionicss";
+
+// Include Modules Needed Below
+@include all();
+
+// Syntax Highlighting !Ionicss
+@import "syntax";
+@import "masthead";
+@import "cards";
+@import "hero";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Document puprose only
+// Doc purpose only
+.hero-title {
+  margin: 0;
+  font-family: $font-family-action;
+  font-weight: 300;
+  font-size: 84px;
+}
+.layout .column > code {
+  display: block;
+  padding: 10px;
+  background: rgba(#999, 0.3);
+  border: dashed 1px rgba(#999, 0.8);
+}
+code {
+  padding: 2px 5px;
+  background: #f3f3f3;
+  white-space: nowrap;
+}

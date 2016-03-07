@@ -1,0 +1,50 @@
+---
+layout: page
+permalink: "/navigation/"
+title: Navigation
+categories: modules
+---
+<h1 id="{{ page.title }}">{{ page.title }}</h1>
+
+<h2 id="menu">Menu</h2>
+<b>Usage</b>
+<p>
+{% highlight scss %}
+@incude menu();
+{% endhighlight %}
+</p>
+<b>Options</b>
+<p>
+{% highlight scss %}
+#include menu((
+  name: 'menu',
+  border: (
+    style: solid,
+    width: 1px,
+    color: #ccc
+  ),
+  radius: 3px,
+  background: #fff
+));
+{% endhighlight %}
+</p>
+<div class="row">
+  <div class="column column--1-of-3">
+    <nav class="menu">
+      <span class="menu__title">General Info</span>
+      <a class="menu__item" href="javascript:;">Account</a>
+      <a class="menu__item" href="javascript:;">Profile</a>
+      <a class="menu__item menu__item--is-active" href="javascript:;">Email</a>
+      <a class="menu__item" href="javascript:;">Calendar</a>
+    </nav>
+  </div>
+</div>
+{% highlight html %}
+<nav class="menu">
+  <span class="menu__title">General Info</span>
+  <a class="menu__item" href="#">Account</a>
+  <a class="menu__item" href="#">Profile</a>
+  <a class="menu__item menu__item--is-active" href="#">Email</a>
+  <a class="menu__item" href="#">Calendar</a>
+</nav>
+{% endhighlight %}

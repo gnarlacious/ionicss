@@ -1,0 +1,10 @@
+.hero {
+  display: table;
+  min-height: 40rem;
+  margin-bottom: 40px;
+
+}
+.hero__body {
+  display: table-cell;
+  vertical-align: middle;
+}
