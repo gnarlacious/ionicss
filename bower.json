@@ -1,7 +1,7 @@
 {
   "name": "ionicss",
   "description": "Basic front-end framework and guidelines",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "scss/ionicss.scss",
   "authors": [
     "Dustin Delatore <dustin@delatore.me>"
@@ -20,5 +20,5 @@
     "app",
     "test",
     "tests"
-  ],
+  ]
 }
